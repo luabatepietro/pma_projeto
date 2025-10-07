@@ -8,12 +8,9 @@
 
 ## Grupo/Kit X
 
-1. João da Silva
-1. Pedro de Souza
-1. Maria Oliveira
-1. Grupo K
-    - João da Silva
-    - Pedro de Souza
+1. Lucas Abatepietro
+1. Marcelo Alonso
+1. Henrique Bucci
 
 
 
@@ -24,7 +21,7 @@
 
 ## Entregas
 
-- [x] Roteiro 1 - Data 23/02/2025
+- [x] Product API - Data 24/10/2025
 - [ ] Roteiro 2
 - [ ] Roteiro 3
 - [ ] Roteiro 4
