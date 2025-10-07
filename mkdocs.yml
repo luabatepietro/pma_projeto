@@ -1,8 +1,8 @@
-site_name: Template de Entrega
-site_author: Sandmann, H.
-site_url: https://hsandmann.github.io/documentation.template
-repo_url: https://github.com/hsandmann/documentation.template
-repo_name: github/documentation.template
+site_name: Projeto Individual
+site_author: Lucas Abatepietro
+site_url: https://luabatepietro.github.io/pma_projeto
+repo_url: https://github.com/luabatepietro/pma_projeto
+repo_name: github/pma_projeto
 
 theme:
   name: material
@@ -110,7 +110,7 @@ plugins:
       enable_creation_date: true
   - git-authors
   - git-committers:
-      repository: hsandmann/documentation.template
+      repository: luabatepietro/pma_projeto
       branch: main
   - search
   - badges
