@@ -3,7 +3,7 @@
 
 ???+ info inline end "Edição"
 
-    2025.1
+    2025.2
 
 
 ## Grupo/Kit X
