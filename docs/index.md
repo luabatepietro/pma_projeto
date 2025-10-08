@@ -1,18 +1,14 @@
 # Template de Entrega
 
-
 ???+ info inline end "Edição"
 
     2025.2
-
 
 ## Grupo/Kit X
 
 1. Lucas Abatepietro
 1. Marcelo Alonso
 1. Henrique Bucci
-
-
 
 !!! tip "Instruções"
 
@@ -22,19 +18,18 @@
 ## Entregas
 
 - [x] Product API - Data 24/10/2025
-- [ ] Roteiro 2
+- [x] Order API - Data 24/10/2025
 - [ ] Roteiro 3
 - [ ] Roteiro 4
 - [ ] Projeto
 
 ## Diagramas
 
-Use o [Mermaid](https://mermaid.js.org/intro/){:target='_blank'} para criar os diagramas de documentação.
+Use o [Mermaid](https://mermaid.js.org/intro/){:target='\_blank'} para criar os diagramas de documentação.
 
-[Mermaid Live Editor](https://mermaid.live/){:target='_blank'}
+[Mermaid Live Editor](https://mermaid.live/){:target='\_blank'}
 
-
-``` mermaid
+```mermaid
 flowchart TD
     Deployment:::orange -->|defines| ReplicaSet
     ReplicaSet -->|manages| pod((Pod))
@@ -44,7 +39,7 @@ flowchart TD
 
     Service:::orange -->|exposes| pod
 
-    subgraph  
+    subgraph
         ConfigMap:::orange
         Secret:::orange
     end
@@ -54,8 +49,6 @@ flowchart TD
     classDef red fill:#f55
     classDef orange fill:#ffa500
 ```
-
-
 
 ## Códigos
 
@@ -84,14 +77,12 @@ flowchart TD
 
     2. Aqui é feito um túnel da porta 5432 do container do banco de dados para a porta 5432 do host (no caso localhost). Em um ambiente de produção, essa porta não deve ser exposta, pois ninguém de fora do compose deveria acessar o banco de dados diretamente.
 
-
 ## Exemplo de vídeo
 
 Lorem ipsum dolor sit amet
 
 <iframe width="100%" height="470" src="https://www.youtube.com/embed/3574AYQml8w" allowfullscreen></iframe>
 
-
 ## Referências
 
-[Material for MkDocs](https://squidfunk.github.io/mkdocs-material/reference/){:target='_blank'}
+[Material for MkDocs](https://squidfunk.github.io/mkdocs-material/reference/){:target='\_blank'}

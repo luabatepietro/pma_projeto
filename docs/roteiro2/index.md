@@ -94,7 +94,7 @@ Foram implementados os seguintes endpoints com request body e response da seguin
 
 !!! info "POST /order"
 
-    Create a new order **for the current user**.
+    Cria um novo order 
 
     === "Request"
 
@@ -147,7 +147,7 @@ Foram implementados os seguintes endpoints com request body e response da seguin
 
 !!! info "GET /order"
 
-    Get all orders **for the current user**.
+    Pega todos os orders
 
     === "Response"
 
@@ -172,8 +172,8 @@ Foram implementados os seguintes endpoints com request body e response da seguin
 
 !!! info "GET /order/{id}"
 
-    Get the order details by its ID. **The order must belong to the current user.**, otherwise, return a `404`.
-
+    pega order por {id}
+    
     === "Response"
 
         ``` { .json .copy .select linenums='1' }
