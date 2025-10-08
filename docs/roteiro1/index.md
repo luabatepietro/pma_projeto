@@ -30,16 +30,18 @@ flowchart LR
 ## Tarefas
 
 1. Implementar um microserviço **PRODUCT** que contenha:
-   - POST/product: cria um produto
-   - GET/product: pega todos os produtos
-   - GET/product/{id}: pega um produto pelo ´id´
-   - DELETE/product/{id}: deleta um produto dado um id
 
-- O serviço foi implementado em Java utilizando:
-  - Spring Boot
-  - Spring Data JPA
-  - Spring Cloud OpenFeign para comunicação.
-  - Banco de dados: PostgreSQL.
+   - `POST/product`: cria um produto
+   - `GET/product`: pega todos os produtos
+   - `GET/product/{id}`: pega um produto pelo ´id´
+   - `DELETE/product/{id}`: deleta um produto dado um id
+
+2. O serviço foi implementado em Java utilizando:
+
+- Spring Boot
+- Spring Data JPA
+- Spring Cloud OpenFeign para comunicação.
+- Banco de dados: PostgreSQL.
 
 ## Endpoints implementados
 
