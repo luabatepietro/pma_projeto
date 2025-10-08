@@ -45,80 +45,97 @@ flowchart LR
 
 Foram implementados os seguintes endpoints com request body e response da seguinte forma:
 
-### POST/product
+!!! info "POST /product"
+Cria um novo produto
 
-#### Request body
+=== "Request"
 
-```JSON
-{
-  "name": "Milho",
-  "price": 69,
-  "unit": "Ton"
-}
-```
+    ```{ .json .copy .select linenums='1' }
+    {
+      "name": "Milho",
+      "price": 69,
+      "unit": "Ton"
+    }
+    ```
 
-#### Response
+=== "Response"
 
-```JSON
-{
-  "id": "generated-uuid",
-  "name": "Milho",
-  "price": 69,
-  "unit": "Ton"
-}
-```
+    ```{ .json .copy .select linenums='1' }
+    {
+      "id": "generated-uuid",
+      "name": "Milho",
+      "price": 69,
+      "unit": "Ton"
+    }
+    ```
+    ```bash
+    Response code: 201 (Created)
+    ```
 
 ---
 
-### GET/product
+!!! info "GET /product"
 
-#### Response CODE 200
+Lista todos os produtos.
 
-```JSON
+=== "Response 200"
 
-[
-    {
+    ```{ .json .copy .select linenums='1' }
+    [
+      {
         "id": "0195abfb-7074-73a9-9d26-b4b9fbaab0a8",
         "name": "Milho",
         "price": 69,
         "unit": "Ton"
-    },
-    {
+      },
+      {
         "id": "0195abfe-e416-7052-be3b-27cdaf12a984",
         "name": "Queijadinha",
         "price": 0.62,
         "unit": "g"
-    }
-]
-```
+      }
+    ]
+    ```
+    ```bash
+    Response code: 200 (OK)
+    ```
 
 ---
 
-### GET/product/{id}
+!!! info "GET /product/{id}"
 
-#### Response CODE 200
+Pega um produto pelo id
 
-```JSON
+=== "Response 200"
 
-[
-    {
+    ```{ .json .copy .select linenums='1' }
+    [
+      {
         "id": "0195abfb-7074-73a9-9d26-b4b9fbaab0a8",
         "name": "Milho",
         "price": 69,
         "unit": "Ton"
-    }
-]
-```
+      }
+    ]
+    ```
+    ```bash
+    Response code: 200 (OK)
+    ```
 
 ---
 
-### DELETE/product/{id}
+!!! info "DELETE /product/{id}"
 
-#### Response
+Deleta um produto pelo id
 
-```JSON
-Retorna 204 No Content ao remover com sucesso.
-```
+=== "Response"
+
+    ```bash
+    Response code: 204 (No Content)
+    ```
+    ```{ .json .copy .select linenums='1' }
+    # Sem corpo de resposta.
+    ```
 
 ## Estrutura do projeto
 
@@ -168,8 +185,8 @@ PRODUCT SERVICE
 
 ## Repositórios:
 
-- https://github.com/pma2025/pma252.product
-- https://github.com/pma2025/pma252.product-service
+- [Product](https://github.com/pma2025/pma252.product)
+- [Product-Service](https://github.com/pma2025/pma252.product-service)
 
 ## Conclusão
 
