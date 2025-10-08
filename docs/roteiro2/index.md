@@ -94,7 +94,7 @@ Foram implementados os seguintes endpoints com request body e response da seguin
 
 !!! info "POST /order"
 
-    Cria um novo order 
+    Cria um novo order
 
     === "Request"
 
@@ -173,7 +173,7 @@ Foram implementados os seguintes endpoints com request body e response da seguin
 !!! info "GET /order/{id}"
 
     pega order por {id}
-    
+
     === "Response"
 
         ``` { .json .copy .select linenums='1' }
@@ -205,3 +205,12 @@ Foram implementados os seguintes endpoints com request body e response da seguin
         Response code: 200 (ok)
         Response code: 404 (not found), if the order does not belong to the current user.
         ```
+
+## Repositórios:
+
+- [Order](https://github.com/pma2025/pma252.order)
+- [Order-Service](https://github.com/pma2025/pma252.order-service)
+
+## Conclusão
+
+Cada enxadada uma minhoca.
