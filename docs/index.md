@@ -19,7 +19,7 @@
 
 - [x] Product API - Data 24/10/2025
 - [x] Order API - Data 24/10/2025
-- [ ] Roteiro 3
+- [x] Exchange API - Data 24/10/2025
 - [ ] Roteiro 4
 - [ ] Projeto
 
