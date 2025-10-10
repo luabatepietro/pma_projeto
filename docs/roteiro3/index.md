@@ -75,6 +75,14 @@ api/
         Response code: 200 (ok)
         ```
 
+## Main.py:
+
+=== "main.py"
+
+    ``` { .groovy .copy .select linenums="1" }
+    --8<-- "https://raw.githubusercontent.com/pma2025/pma252.exchange-service/refs/heads/main/main.py?token=GHSAT0AAAAAADIWFLY3QDFXZMSLJAJRWKKA2HJBZ5A"
+    ```
+
 ## Repositorios:
 
 [Exchange-Service](https://github.com/pma2025/pma252.exchange-service)
