@@ -24,7 +24,7 @@ theme:
 
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
-      scheme: default 
+      scheme: default
       primary: grey
       toggle:
         icon: material/toggle-switch-off-outline
@@ -77,7 +77,7 @@ markdown_extensions:
       line_spans: __span
       pygments_lang_class: true
   - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji 
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.inlinehilite
   - pymdownx.snippets:
@@ -94,7 +94,7 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.tasklist:
-      custom_checkbox: true  
+      custom_checkbox: true
   - footnotes
   - pymdownx.critic
   - pymdownx.caret
@@ -103,7 +103,7 @@ markdown_extensions:
   - pymdownx.tilde
   - pymdownx.blocks.caption
   - tables
-      
+
 plugins:
   - glightbox
   - git-revision-date-localized:
@@ -118,13 +118,13 @@ plugins:
       minify_html: true
   - markdown-exec
   - render_swagger:
-      allow_arbitrary_locations : true
+      allow_arbitrary_locations: true
   - termynal:
       prompt_literal_start:
         - "$"
         - ">"
 
-# mkdocs-jupyter
+  # mkdocs-jupyter
   - mkdocs-jupyter:
       execute: false
       allow_errors: false
@@ -143,9 +143,9 @@ nav:
   - Home: index.md
   - This documentation: ./thisdocumentation/index.md
   - Exercícios:
-    - Product API: ./roteiro1/index.md
-    - Order API: ./roteiro2/index.md
-    - Exchange API: ./roteiro3/index.md
-    - Roteiro 4: ./roteiro4/index.md
-    - Notebook 1: ./notebook1/ex1_data.ipynb
+      - Product API: ./roteiro1/index.md
+      - Order API: ./roteiro2/index.md
+      - Exchange API: ./roteiro3/index.md
+      - Jenkins: ./roteiro4/index.md
+      - Notebook 1: ./notebook1/ex1_data.ipynb
   - Projeto: ./projeto/index.md
