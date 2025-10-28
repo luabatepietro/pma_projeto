@@ -147,5 +147,5 @@ nav:
       - Order API: ./roteiro2/index.md
       - Exchange API: ./roteiro3/index.md
       - Jenkins: ./roteiro4/index.md
-      - Notebook 1: ./notebook1/ex1_data.ipynb
+      - K8S: ./roteiro5/index.md
   - Projeto: ./projeto/index.md

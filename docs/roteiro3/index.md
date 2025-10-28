@@ -43,14 +43,11 @@ Implementar um microserviço implementado em **FastAPI**, que consulta um proved
 api/
     exchange-service/
         app/
-            __init__.py
             main.py
             auth.py
             config.py
             models.py
-            clients/
-                __init__.py
-                rates.py
+            rates.py
         requirements.txt
         Dockerfile
 ```

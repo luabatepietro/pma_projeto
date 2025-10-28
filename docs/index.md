@@ -21,7 +21,7 @@
 - [x] Order API - Data 24/10/2025
 - [x] Exchange API - Data 24/10/2025
 - [x] Jenkins -  24/10/2025
-- [ ] Projeto
+- [x] K8s - 24/10/2025
 
 ## Diagramas
 
