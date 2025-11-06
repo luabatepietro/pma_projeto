@@ -15,20 +15,15 @@ flowchart LR
         account --> db[(Database)]
         auth --> account
         gateway --> exchange:::red
-        gateway --> product
         gateway --> order
-        product --> db
+        exchange --> db
         order --> db
-        order --> product
+        order --> exchange
     end
-
-    exchange --> thirdparty:::green
     internet((Internet)) -->|Request| gateway
 
     classDef red fill:#fcc,stroke:#c00,stroke-width:2px;
-    classDef green fill:#cfc,stroke:#090,stroke-width:2px;
 
-    click exchange "#endpoint" "Exchange API"
 ```
 
 ---

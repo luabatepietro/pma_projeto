@@ -24,7 +24,6 @@ flowchart LR
 
     classDef red fill:#fcc,stroke:#c00,stroke-width:2px;
 
-    click product "#endpoints-implementados" "Product API"
 ```
 
 ---

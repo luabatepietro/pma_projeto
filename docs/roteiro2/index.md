@@ -14,18 +14,16 @@ flowchart LR
         gateway --> auth
         account --> db[(Database)]
         auth --> account
-        gateway --> product
         gateway --> order:::red
-        product --> db
+        gateway --> order
         order --> db
-        order --> product
+        order --> db
+        order --> order
     end
-
     internet((Internet)) -->|Request| gateway
 
     classDef red fill:#fcc,stroke:#c00,stroke-width:2px;
 
-    click order "#order-api" "Order API"
 ```
 
 ---
