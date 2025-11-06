@@ -1,8 +1,10 @@
-### Exchange API
+# EXCHANGE API
 
-- feito por Lucas Abatepietro
+**Feito por:** Lucas Abatepietro
 
-## Estrutura da requisição
+---
+
+## Arquitetura
 
 ```mermaid
 flowchart LR
@@ -10,72 +12,83 @@ flowchart LR
         direction TB
         gateway --> account
         gateway --> auth
-        account --> db@{ shape: cyl, label: "Database" }
+        account --> db[(Database)]
         auth --> account
-        gateway e1@==> exchange:::red
+        gateway --> exchange:::red
         gateway --> product
         gateway --> order
         product --> db
         order --> db
         order --> product
     end
-    exchange e3@==> 3partyapi:::green@{label: "3rd-party API"}
-    internet e2@==>|request| gateway
-    e1@{ animate: true }
-    e2@{ animate: true }
-    e3@{ animate: true }
-    classDef red fill:#fcc
-    classDef green fill:#cfc
-    click product "#product-api" "Product API"
+
+    exchange --> thirdparty:::green
+    internet((Internet)) -->|Request| gateway
+
+    classDef red fill:#fcc,stroke:#c00,stroke-width:2px;
+    classDef green fill:#cfc,stroke:#090,stroke-width:2px;
+
+    click exchange "#endpoint" "Exchange API"
 ```
 
-## Tarefas:
+---
 
-Implementar um microserviço implementado em **FastAPI**, que consulta um provedor externo de câmbio e aplica regras de spread.
+## Tarefas
 
-- essa API usa o [ExchangeRate-API](https://www.exchangerate-api.com/) para pegar o preço atual das trocas entre moedas (câmbio)
+Implementar um microserviço desenvolvido em **FastAPI**, responsável por consultar um provedor externo de câmbio e aplicar regras de spread.
 
-## Estrutura do projeto
+- A API utiliza o [**ExchangeRate-API**](https://www.exchangerate-api.com/) para obter o preço atual das trocas entre moedas (câmbio).
+
+---
+
+## Estrutura do Projeto
 
 ### Exchange-Service
 
-```tree
-api/
-    exchange-service/
-        app/
-            main.py
-            auth.py
-            config.py
-            models.py
-            rates.py
-        requirements.txt
-        Dockerfile
+```
+📁 api/
+└── 📁 exchange-service/
+    ├── 📁 app/
+    │   ├── 📄 main.py
+    │   ├── 📄 auth.py
+    │   ├── 📄 config.py
+    │   ├── 📄 models.py
+    │   └── 📄 rates.py
+    ├── 📄 requirements.txt
+    └── 📄 Dockerfile
 ```
 
-## Endpoint:
+---
 
-!!! info "GET/exchange/{from}/{to}"
+## Endpoint Implementado
 
-    Pega a taxa de câmbio de uma moeda para outro.
+### **GET /exchange/{from}/{to}**
 
-    === "Response"
+Retorna a taxa de câmbio entre duas moedas.
 
-        ``` { .json .copy .select linenums='1' }
-            {
-                "sell": 0.82,
-                "buy": 0.80,
-                "date": "2021-09-01 14:23:42",
-                "id-account": "0195ae95-5be7-7dd3-b35d-7a7d87c404fb"
-            }
-        ```
-        ```bash
-        Response code: 200 (ok)
-        ```
+=== "Response"
 
-## Repositorios:
+```json
+{
+  "sell": 0.82,
+  "buy": 0.8,
+  "date": "2021-09-01 14:23:42",
+  "id-account": "0195ae95-5be7-7dd3-b35d-7a7d87c404fb"
+}
+```
 
-[Exchange-Service](https://github.com/pma2025/pma252.exchange-service)
+```bash
+Response code: 200 (OK)
+```
+
+---
+
+## Repositórios
+
+- [Exchange-Service](https://github.com/pma2025/pma252.exchange-service)
+
+---
 
 ## Conclusão
 
-Cada enxadada uma minhoca.
+> Cada enxadada, uma minhoca. 🪱

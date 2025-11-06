@@ -1,56 +1,64 @@
-# Jenkins
+# JENKINS
 
-A orquestração da esteira de CI/CD do domínio **store** é realizada pelo **Jenkins**, que executa dois tipos principais de _pipelines_:
+A orquestração da esteira de **CI/CD** do domínio **store** é realizada pelo **Jenkins**, que executa dois tipos principais de _pipelines_:
 
-### 1. Pipelines de Interfaces
+---
 
-_(account, auth, product, order, …)_
+## 1. Pipelines de Interfaces
+
+_(Ex.: account, auth, product, order, …)_
 
 - Responsáveis por empacotar **artefatos e contratos** utilizados por outros módulos.
 - **Não** geram nem publicam imagens Docker.
 
-### 2. Pipelines de Serviços
+---
+
+## 2. Pipelines de Serviços
 
 _(Ex.: account-service, auth-service, product-service, order-service, gateway-service, …)_
 
 - Realizam o build da aplicação (Java ou Python).
-
-- Executam o build e push de imagens Docker para o Docker Hub.
-
+- Executam o build e push de imagens Docker para o **Docker Hub**.
 - Podem acionar pipelines de dependência, como a compilação prévia da interface correspondente.
 
-### Status atual do pipeline:
+---
 
-![alt text](img/image.png)
+## Status Atual do Pipeline
 
-### Estrutura do projeto
+![Status do Pipeline](img/image.png)
 
-```tree
-api/
-├── jenkins/
-|   ├── compose.yaml
-|   └── config/...
-├── account/
-│   ├── Jenkinsfile
-│   ├── Dockerfile
-│   └── src/...
-├── auth-service/
-│   ├── Jenkinsfile
-│   ├── Dockerfile
-│   └── src/...
-├── gateway-service/
-│   ├── Jenkinsfile
-│   ├── Dockerfile
-│   └── src/...
-├── product/
-│   ├── Jenkinsfile
-│   └── src/...
-└── order/
-    ├── Jenkinsfile
-    └── src/...
+---
+
+## Estrutura do Projeto
+
+```
+📁 api/
+├── 📁 jenkins/
+│   ├── 📄 compose.yaml
+│   └── 📁 config/
+├── 📁 account/
+│   ├── 📄 Jenkinsfile
+│   ├── 📄 Dockerfile
+│   └── 📁 src/
+├── 📁 auth-service/
+│   ├── 📄 Jenkinsfile
+│   ├── 📄 Dockerfile
+│   └── 📁 src/
+├── 📁 gateway-service/
+│   ├── 📄 Jenkinsfile
+│   ├── 📄 Dockerfile
+│   └── 📁 src/
+├── 📁 product/
+│   ├── 📄 Jenkinsfile
+│   └── 📁 src/
+└── 📁 order/
+    ├── 📄 Jenkinsfile
+    └── 📁 src/
 ```
 
-### Jenkins setup:
+---
+
+## Jenkins Setup
 
 ```yaml
 # docker compose up -d --build --force-recreate
@@ -68,12 +76,8 @@ services:
         RUN apt-get update && apt-get install -y lsb-release iputils-ping maven
 
         # Install Docker
-        RUN curl -fsSLo /usr/share/keyrings/docker-archive-keyring.asc \
-          https://download.docker.com/linux/debian/gpg
-        RUN echo "deb [arch=$(dpkg --print-architecture) \
-          signed-by=/usr/share/keyrings/docker-archive-keyring.asc] \
-          https://download.docker.com/linux/debian \
-          $(lsb_release -cs) stable" > /etc/apt/sources.list.d/docker.list
+        RUN curl -fsSLo /usr/share/keyrings/docker-archive-keyring.asc           https://download.docker.com/linux/debian/gpg
+        RUN echo "deb [arch=$(dpkg --print-architecture)           signed-by=/usr/share/keyrings/docker-archive-keyring.asc]           https://download.docker.com/linux/debian           $(lsb_release -cs) stable" > /etc/apt/sources.list.d/docker.list
         RUN apt-get update && apt-get install -y docker-ce
 
         # Install kubectl
@@ -93,9 +97,11 @@ services:
     restart: always
 ```
 
-### API Pipeline
+---
 
-Example of a Jenkinsfile for the `account-service`:
+## Exemplo de Pipeline de Serviço
+
+**Jenkinsfile para `account-service`:**
 
 ```groovy
 pipeline {
@@ -133,9 +139,11 @@ pipeline {
 }
 ```
 
-### Contract Pipeline
+---
 
-Example of a Jenkinsfile for the `contract`:
+## Exemplo de Pipeline de Contrato
+
+**Jenkinsfile para `contract`:**
 
 ```groovy
 pipeline {
@@ -148,10 +156,11 @@ pipeline {
             }
         }
     }
-
 }
 ```
 
-### Conclusão
+---
 
-Cada enxadada uma minhoca!
+## Conclusão
+
+> Cada enxadada, uma minhoca. 🪱
