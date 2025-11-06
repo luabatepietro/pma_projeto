@@ -130,14 +130,14 @@ plugins:
       allow_errors: false
 
 extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js
   - https://unpkg.com/mathjax/es5/tex-mml-chtml.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   - https://fastly.jsdelivr.net/npm/jquery/dist/jquery.min.js
   - https://fastly.jsdelivr.net/npm/echarts/dist/echarts.min.js
-
-  # Para a implementação do mkdocs-jupyter
   - javascripts/mathjax.js
+  # Para a implementação do mkdocs-jupyter
 
 nav:
   - Home: index.md
