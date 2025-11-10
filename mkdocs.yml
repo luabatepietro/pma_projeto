@@ -148,4 +148,5 @@ nav:
       - Exchange API: ./roteiro3/index.md
       - Jenkins: ./roteiro4/index.md
       - K8S: ./roteiro5/index.md
+      - Bottlenecks: ./roteiro6/index.md
   - Projeto: ./projeto/index.md
