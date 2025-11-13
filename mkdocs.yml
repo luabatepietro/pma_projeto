@@ -152,3 +152,4 @@ nav:
   - Projeto:
       - Teste de carga: ./projeto/index.md
       - CI/CD: ./roteiro7/index.md
+      - Análise de custos: ./roteiro8/index.md
