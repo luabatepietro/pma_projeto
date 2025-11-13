@@ -151,3 +151,4 @@ nav:
       - Bottlenecks: ./roteiro6/index.md
   - Projeto:
       - Teste de carga: ./projeto/index.md
+      - CI/CD: ./roteiro7/index.md

@@ -1,5 +1,12 @@
 # Teste de carga - 20%
 
+* Desenvolvido por:
+    * Lucas Abatepietro
+    * Marcelo Alonso
+    * Henrique Bucci
+
+
+
 Vamos ver se nossa aplicação é capaz de aguentar com um trafego que aumenta cada vez mais.
 > Abaixo a um GIF mostrando como o nosso serviço é capaz de escalar conforme a demanda.
 
